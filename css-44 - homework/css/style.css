@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+.genblock {
+    background-color: rgb(138, 171, 202);
+    max-width: 1200px;
+    max-height: 550px;
+    padding: 5px;
+}
+
+.genblock {
+    border: 1px solid;
+    /* border-radius: 30px ; */
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    overflow: auto;
+}
+
+.text {
+    background-color: #d3c08e;
+    max-width: 245px;
+    margin: 5px;
+    margin-left: 1px;
+    /* padding: 20px; */
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+}
+
+
+
+.text {
+    border-radius: 20px;
+    /* border: 1px solid #000; */
+    box-shadow: inset 0px 0px 4px 1px ;
+}
+
+.text {
+    opacity: 0.9;
+    display: inline-block;
+}
