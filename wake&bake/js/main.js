@@ -72,29 +72,29 @@
     }
 })();
 
+// focus
 
+(function () {
+    document.addEventListener('click', focus)
+    function focus(event) {
+        const tab = event.target.closest('.tab-controls__link')
+        const tabID = tab.getAttribute('href')
+        const focus = document.querySelector('.tab-controls__link--focus')
+        const tabNone = document.querySelector('.tab-content--show')
+        const tabContent = document.querySelector(tabID)
 
+        if (!tab) return
+        event.preventDefault()
+        if (tabContent.classList.contains('tab-content--show')) return
 
-``
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        if (focus) {
+            focus.classList.remove('tab-controls__link--focus')
+        }
+        if (tabNone) {
+            tabNone.classList.remove('tab-content--show')
+        }
+        
+        tab.classList.add('tab-controls__link--focus')
+        tabContent.classList.add('tab-content--show')
+    }
+})();
