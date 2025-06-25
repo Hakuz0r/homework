@@ -1,22 +1,6 @@
-// (function() {
-//     const button = document.querySelector('.burger-icon')
-//     const body = document.querySelector('.body')
-//     const nav = document.querySelectorAll('.nav__link')
 
-//     button.addEventListener('click', () => {
-//         body.classList.toggle('body--opened-menu')
-//     })
+// burger
 
-//     nav.forEach(link => {
-//         link.addEventListener('click', () => {
-//             body.classList.remove('body--opened-menu')
-//         })
-//     })
-// })()
-
-// ПРАВИЛЬНЫЙ ВАРИАНТ
-// Переписал у Никиты, но убрал пару строчек, заменив метод add на toggle
-// Сделал так, чтобы класс у боди убирался при нажатии клавиши esc
 (function () {
     document.addEventListener('click', menu)
     document.addEventListener('keydown', menu)
@@ -78,7 +62,7 @@
     document.addEventListener('click', focus)
     function focus(event) {
         const tab = event.target.closest('.tab-controls__link')
-        
+
         if (!tab) return
         const tabID = tab.getAttribute('href')
         const focus = document.querySelector('.tab-controls__link--focus')
@@ -133,7 +117,63 @@
                 accordionContent.style.maxHeight = null
             }
 
-        })
-    })
+        });
+    });
 
+    // Слайдер - галерея
+
+    const swiper = new Swiper('.gallery__slider', {
+
+        spaceBetween: 20,
+        slidesPerView: 3,
+
+
+        pagination: {
+            el: '.gallery__pagination',
+            type: 'fraction',
+        },
+
+        navigation: {
+            nextEl: '.next',
+            prevEl: '.prev',
+        },
+
+        breakpoints: {
+            319: {
+                slidesPerView: 1.5,
+            },
+
+            500: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+
+            699: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+
+            1001: {
+                slidesPerView: 4,
+                spaceBetween: 32
+            }
+        }
+    });
+
+
+    // Стрелка
+    // function updateButton (swipe) {
+    //     const prevButton = document.querySelector('.prev')
+    //     if (swipe.isBeginning) {
+    //         prevButton.classList.remove('gallery__control-arrow')
+    //     } else {
+    //         prevButton.classList.add('gallery__control-arrow')
+    //     }
+    // }
+
+    // const prevButton = document.querySelector('.gallery__control-arrow prev')
+    // const slider = document.querySelectorAll('.gallery__slider')
+
+
+    
 })();

@@ -1,0 +1,146 @@
+.footer {
+    background-color: #AB8261;
+    color: var(--bg-color);
+    padding: 0 0 66px;
+}
+
+.footer__inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1.2fr 1fr;
+    justify-items: center;
+    align-items: start;
+}
+
+.footer__column {
+    padding-top: 60px;
+    justify-self: start;
+}
+
+.footer__column:first-child {
+    max-width: 241px;
+    width: 100%;
+    margin-right: 56px;
+    padding-top: 0;
+    margin-top: 30px;
+}
+
+.footer__column:last-child {
+    justify-self: end;
+}
+
+.second-col {
+    justify-self: start;
+}
+
+.footer__logo {
+    display: block;
+    max-width: 240px;
+}
+
+.footer__logo img {
+    width: 100%;
+}
+
+.footer__paragraph {
+    margin-bottom: 20px;
+    width: 272px;
+}
+
+.footer__list {
+    margin-top: -5px;
+}
+
+.footer__item {
+    margin: 0 0 10px;
+}
+
+.footer__item:last-child {
+    margin: 0;
+}
+
+.footer__link {
+    position: relative;
+    display: inline-block;
+    padding: 5px 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.footer__link::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -13px;
+    width: 34px;
+    height: 34px;
+    background-color: var(--bg-accent);
+    border-radius: 50%;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+    opacity: 0;
+}
+
+.footer__link:hover::before {
+    opacity: 1;
+}
+
+.footer__info-item {
+    margin: 0 0 10px;
+}
+
+.footer__info-item:last-child {
+    margin: 0;
+}
+
+.footer__info-item img {
+    margin-right: 8px;
+}
+
+.footer__info-item span {
+    text-transform: uppercase;
+}
+
+.footer__info-item span:last-child {
+    margin-left: 10px;
+}
+
+.footer__cont-consult {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__cont-number {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 47px;
+    transition: var(--trans);
+}
+
+.footer__cont-number:hover {
+    color: var(--bg-accent);
+}
+
+.footer__cont-copy {
+    display: flex;
+    justify-content: end;
+    color: #dec5b1;
+    gap: 5px;
+}
+
+.socials {
+    line-height: 0;
+}
+
+.socials__list {
+    display: flex;
+    gap: 15px;
+}
+
+.socials__link path {
+    transition: var(--trans);
+}
+
+.socials__link:hover path {
+    fill: var(--bg-accent);
+}
