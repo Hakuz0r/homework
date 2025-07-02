@@ -390,13 +390,6 @@
 
 /* ================ main(gallery) ================ */
 
-.icon-gray,
-.icon-gray-path {
-    fill: #e1d9e1;
-}
-
-.gallery__inner {}
-
 .gallery__info {
     display: flex;
     justify-content: end;
@@ -424,7 +417,6 @@
     color: var(--title-text);
 }
 
-.gallery__description {}
 
 .gallery__control {
     font-family: 'Gabriola';
@@ -457,16 +449,19 @@
     border: 2px solid #e1d9e1;
     cursor: default;
 }
+
 .swiper-button-disabled path {
-    fill: #e1d9e1 !important; 
+    fill: #e1d9e1 !important;
 }
 
 .gallery__control-arrow:hover {
     background-color: var(--bg-accent);
 }
-.gallery__control-arrow, .swiper-button-disabled:hover {
+
+.gallery__control-arrow,
+.swiper-button-disabled:hover {
     background-color: transparent;
-} 
+}
 
 .gallery__control-arrow path {
     fill: var(--bg-accent);
@@ -490,6 +485,174 @@
     border-radius: var(--border-radius);
     width: 100%;
 }
+
+/* ================ main(reviews) ================ */
+
+
+
+.reviews__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    gap: 30px;
+}
+
+.reviews__text {
+    max-width: 632px;
+}
+
+.reviews__title {
+    font-family: "Gabriola", sans-serif;
+    font-size: 74px;
+    line-height: .82;
+    color: var(--title-text);
+    padding-bottom: 20px;
+}
+
+.reviews__description {}
+
+.reviews__control {
+    align-self: end;
+    display: flex;
+    gap: 30px;
+
+}
+
+.reviews__control path {
+    transition: var(--trans);
+}
+
+.reviews__control-arrow {
+    background-color: transparent;
+    border: 2px solid var(--bg-accent);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--trans);
+}
+
+.reviews__control-arrow.swiper-button-disabled {
+    border: 2px solid #e1d9e1;
+    cursor: default;
+}
+
+.reviews__control-arrow:hover {
+    background-color: var(--bg-accent);
+}
+
+.reviews__control-arrow,
+.swiper-button-disabled:hover {
+    background-color: transparent;
+}
+
+.reviews__control-arrow path {
+    fill: var(--bg-accent);
+}
+
+.reviews__control-arrow:hover path {
+    fill: var(--bg-color);
+}
+
+.reviews__slider {
+    overflow: visible;
+}
+
+
+.reviews__wrapper {
+    margin-bottom: 40px;
+}
+
+.swiper-wrapper {}
+
+.reviews__slide {
+    display: flex;
+    justify-content: center;
+    background: var(--bg-element);
+    border-radius: var(--border-radius);
+    transform: scale(.9);
+    transition: var(--trans);
+    height: auto;
+}
+
+.reviews__slide.swiper-slide {
+    transform: scale(.9);
+    opacity: 0;
+}
+
+.swiper-slide-active.reviews__slide {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.swiper-slide-prev.reviews__slide,
+.swiper-slide-next.reviews__slide {
+    opacity: 0.5;
+}
+
+
+
+.reviews__student {
+    padding: 30px 30px 60px;
+    text-align: center;
+}
+
+.reviews__student-img {
+    margin-bottom: 20px;
+
+}
+
+.reviews__student-img img {
+    border-radius: var(--border-radius);
+}
+
+.reviews__student-name {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    line-height: 1.6;
+    color: var(--title-text);
+}
+
+.reviews__student-inst {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    color: #ceaad0;
+}
+
+.reviews__quote {
+    padding: 30px 30px 40px 0;
+
+}
+
+.reviews__quote span {
+    display: block;
+    font-family: "Gabriola";
+    font-size: 32px;
+    line-height: .9;
+    color: var(--title-text);
+    padding-bottom: 10px;
+}
+
+.swiper-scrollbar {
+    background-color: var(--bg-element);
+}
+
+.reviews__scrollbar.swiper-scrollbar {
+    position: static;
+    width: 100%;
+    height: 7px;
+}
+
+.swiper-scrollbar .swiper-scrollbar-drag {
+    background-color: var(--bg-accent);
+
+}
+
+
 
 
 /* ============== MEDIA ============== */
@@ -618,6 +781,9 @@
         grid-column: -1 / 2;
         justify-self: center;
     }
+
+
+
 }
 
 @media (max-width: 900px) {
@@ -704,6 +870,13 @@
 
     .footer__column:nth-child(3) img {
         display: none;
+    }
+
+    /* ===== main(reviews) ===== */
+
+    .reviews__scrollbar.swiper-scrollbar {
+        width: 60%;
+        justify-self: center;
     }
 
 }
@@ -806,6 +979,18 @@
 
     .gallery__img {
         align-self: center;
+    }
+
+    /* ===== main(reviews) ===== */
+
+    .reviews__inner {
+        flex-direction: column;
+        padding-bottom: 20px;
+        /* align-items: center; */
+    }
+
+    .reviews__title {
+        font-size: 60px;
     }
 }
 
@@ -1040,6 +1225,23 @@
         font-size: 60px;
 
     }
+
+    /* ===== main (reviews) =====  */
+
+    .reviews__slide {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .reviews__student-img img {
+        width: 50%;
+    }
+
+    .reviews__quote {
+        padding: 10px 10px;
+    }
+
+
 }
 
 @media (max-width: 420px) {
@@ -1144,6 +1346,16 @@
 
     .gallery__description {
         font-size: 14px;
+    }
+
+    /* ===== main (gallery) =====  */
+
+    .reviews__inner {
+        text-align: center;
+    }
+
+    .reviews__title {
+        font-size: 50px;
     }
 
     /* ===== modal ===== */

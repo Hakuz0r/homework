@@ -122,7 +122,7 @@
 
     // Слайдер - галерея
 
-    const swiper = new Swiper('.gallery__slider', {
+    new Swiper('.gallery__slider', {
 
         spaceBetween: 20,
         slidesPerView: 3,
@@ -160,20 +160,33 @@
         }
     });
 
+    new Swiper('.reviews__slider', {
 
-    // Стрелка
-    // function updateButton (swipe) {
-    //     const prevButton = document.querySelector('.prev')
-    //     if (swipe.isBeginning) {
-    //         prevButton.classList.remove('gallery__control-arrow')
-    //     } else {
-    //         prevButton.classList.add('gallery__control-arrow')
-    //     }
-    // }
-
-    // const prevButton = document.querySelector('.gallery__control-arrow prev')
-    // const slider = document.querySelectorAll('.gallery__slider')
+        spaceBetween: 0,
+        slidesPerView: 1,
+        centeredSlides: true,
 
 
-    
+        navigation: {
+            nextEl: '.but-next',
+            prevEl: '.but-prev',
+        },
+
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+
+        breakpoints: {
+            901: {
+                slidesPerView: 1.5,
+            },
+
+            1201: {
+                slidesPerView: 2.1,
+            }
+        }
+
+    });
+
 })();

@@ -51,13 +51,12 @@
     padding: 140px 0;
 }
 
-.main__course {
+.main__course,
+.main__gallery,
+.main__reviews {
     padding-bottom: 145px;
 }
 
-.main__gallery {
-    padding: 140px 0;
-}
 
 .title {
     font-family: 'Gabriola';
