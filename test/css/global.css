@@ -1,0 +1,217 @@
+:root {
+    --accent-color: #ceaad0;
+    --accent-text: #312c27;
+    --title-text: #1f1711;
+    --bg-color: #fff9f4;
+    --input-color: #ac907a;
+    --bg-element: #ffe0cb;
+    --bg-accent: #ffa55c;
+    --trans: all .5s;
+    --border-radius: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    color: var(--accent-text);
+    background-color: var(--bg-color);
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+.body--opened-modal {
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.main__about {
+    padding: 140px 0;
+}
+
+.main__course,
+.main__gallery,
+.main__reviews {
+    padding-bottom: 145px;
+}
+
+
+.title {
+    font-family: 'Gabriola';
+    font-size: 74px;
+    line-height: 0.82;
+    max-width: 520px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-accent);
+    font-size: 16px;
+    line-height: 160%;
+    border-radius: 60px;
+    height: 62px;
+    transition: var(--trans);
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #ff9138;
+}
+
+
+
+
+/* ================ modal ================ */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000007a;
+    padding: 15px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--trans);
+}
+
+.body--opened-modal .modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__window {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 428px;
+    width: 100%;
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    padding: 0 60px 60px;
+
+}
+
+.modal__window-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.modal__window-close:hover path,
+.modal__window-close:hover rect {
+    stroke: var(--input-color);
+}
+
+.modal__window-close path,
+.modal__window-close rect {
+    transition: var(--trans);
+}
+
+.modal__img {
+    position: absolute;
+    top: -65px;
+    left: 72px;
+}
+
+.modal__title {
+    margin: 133px 0 10px;
+    font-family: "Gabriola", sans-serif;
+    font-size: 42px;
+    line-height: 0.9;
+    color: var(--title-text);
+}
+
+.modal__par {
+    margin-bottom: 30px;
+}
+
+.modal__form {
+    display: block;
+    width: 100%;
+}
+
+.modal__form-label {
+    margin-bottom: 10px;
+}
+
+.field {
+    position: relative;
+    display: block;
+}
+
+.field span {
+    position: absolute;
+    top: 12px;
+    left: 28px;
+    font-size: 11px;
+    color: var(--input-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--trans);
+}
+
+.field__input {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--input-color);
+    border-radius: 100px;
+    padding: 19px 41px 19px 28px;
+    background: #00000000;
+    font-size: 16px;
+    cursor: default;
+    transition: var(--trans);
+}
+
+.field__input:focus {
+    padding: 27px 41px 12px 28px;
+    font-size: 16px;
+}
+
+.field__input:focus+span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.field__input:hover {
+    border-color: var(--bg-accent);
+}
+
+.field__input::placeholder {
+    color: var(--input-color);
+    transition: var(--trans);
+}
+
+.field__input:hover::placeholder {
+    color: var(--bg-accent);
+}
