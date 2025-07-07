@@ -1,0 +1,18 @@
+@import "fonts.css";
+@import "reset.css";
+@import "global.css";
+
+@import "header.css";
+@import "footer.css";
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: "Avenir Next Cyr", "Arial", sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    color: var(--accent-text);
+    background-color: var(--bg-color);
+}
