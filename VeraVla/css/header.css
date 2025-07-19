@@ -1,0 +1,239 @@
+/* ===== header-background ===== */
+
+.header__bg-left-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-shadow: inset 58px 4px 191px 47px #000;
+    mix-blend-mode: lighten;
+    z-index: -1;
+}
+
+.header__bg-up-img {
+    position: absolute;
+    top: 2px;
+    left: -261px;
+    box-shadow: inset 58px 4px 191px 47px #000;
+    mix-blend-mode: lighten;
+    z-index: -2;
+    /* height: 1030px; */
+}
+
+
+.header__img-ner {
+    position: absolute;
+    right: -450px;
+    bottom: 150px;
+    box-shadow: inset 58px 4px 191px 47px #000;
+    mix-blend-mode: lighten;
+    z-index: -1;
+    max-width: 1200px;
+}
+
+.header__img-ner img {
+    width: 100%;
+}
+
+
+/* ===== header ====== */
+
+.header {
+    background: linear-gradient(313deg, #022335 0%, #043a41 100%);
+    position: relative;
+    z-index: 4;
+    overflow: hidden;
+}
+
+
+.header__top {
+    padding-bottom: 155px;
+    margin-top: 40px;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__logo {
+    max-width: 287px;
+}
+
+.header__logo img {
+    width: 100%;
+}
+
+/* ===== section ===== */
+
+.header__section {
+    display: flex;
+    margin: 0 0 178px 0;
+    z-index: 1;
+}
+
+
+.section__opening {
+    padding-bottom: 77px;
+}
+
+.section__opening span {
+    font-weight: 600;
+    font-size: 18px;
+    color: #747d81;
+}
+
+.section__opening-title {
+    font-family: "Avenir Next Cyr", sans-serif;
+    font-weight: 600;
+    font-size: 108px;
+    background: linear-gradient(180deg, #fff 31.75%, #1a3031 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 18px;
+
+}
+
+.section__opening-subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    max-width: 580px;
+}
+
+.section__guarantee {
+    display: flex;
+    gap: 33px;
+    padding-bottom: 101px;
+}
+
+.section__guarantee-img {
+    position: relative;
+    border-radius: 12px;
+    width: 71px;
+    height: 71px;
+    background: linear-gradient(180deg, #00e0ff1c 0%, #00e0ff1c 100%);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.section__guarantee-img::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 12px;
+    background: url('https://veravla-edu.online/wp-content/themes/veravia/assets/img/home__info-image.svg');
+
+
+
+}
+
+.section__guarantee-img img {
+    position: absolute;
+    top: 19px;
+    left: 17px;
+    width: 50%;
+}
+
+.section__guarantee-text {
+    font-weight: 750;
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.section__guarantee-text span {
+    font-weight: 500;
+    color: #00e0ff;
+}
+
+.section__guarantee-text span:first-child {
+    line-height: 1.7;
+    padding-top: 10px;
+}
+
+
+
+.header__button {
+    display: flex;
+    gap: 110px;
+}
+
+.header__button-first {
+    max-width: 479px;
+    width: 100%;
+}
+
+.header__button-second {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    position: relative;
+    height: 100px;
+    transition: var(--trans);
+}
+
+.header__button-second span:last-child {
+    transition: var(--trans);
+}
+
+.header__button-second span:last-child:hover {
+    color: var(--accent-sec-text);
+}
+
+
+.header__button-second span:first-child {
+    display: block;
+    border: 1px solid #4a8bec;
+    border-radius: 60px;
+    width: 20px;
+    height: 37px;
+    background: rgba(196, 196, 196, 0);
+    position: relative;
+}
+
+.header__button-second span:first-child::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 2.4px;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    background-color: #4abcec;
+    box-shadow: 0 4px 10px 0 rgba(74, 217, 236, 0.75);
+    animation: moveUpDown 3s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.header__button-second span:last-child {
+    position: absolute;
+    display: inline-block;
+    width: 130px;
+    top: -40px;
+    left: -55px;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: #747d81;
+    transform: rotate(-90deg);
+}

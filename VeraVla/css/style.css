@@ -1,18 +1,128 @@
-@import "fonts.css";
-@import "reset.css";
-@import "global.css";
 
-@import "header.css";
-@import "footer.css";
 
-* {
-    box-sizing: border-box;
+/* ========= main (hero) ========== */
+
+.main__hero {
+    background: linear-gradient(313deg, #043a41 0%, #022335 100%);
+
 }
 
-.body {
-    font-family: "Avenir Next Cyr", "Arial", sans-serif;
-    line-height: 1.5;
-    font-size: 16px;
-    color: var(--accent-text);
-    background-color: var(--bg-color);
+.main__hero::before,
+.main__hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(180deg, rgba(0, 224, 255, 0.11) 0%, rgba(0, 224, 255, 0.11) 100%);
+    box-shadow: 0 0 24px 0 #00e0ff, 0 4px 15px 0 #4ad9ec, 0 3px 15px 0 rgba(0, 224, 255, 0.93);
+}
+
+.hero__title {
+    font-weight: 500;
+    font-size: 54px;
+    text-transform: uppercase;
+    max-width: 530px;
+    padding-bottom: 58px;
+    padding: 124px 0 0;
+}
+
+.hero__title span {
+    color: var(--accent-sec-text);
+}
+
+.hero__items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 58px 0 121px;
+    gap: 20px;
+}
+
+.hero__items-one {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 20px;
+}
+
+.hero__items-two {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 20px;
+}
+
+.hero__item {
+    border-radius: 20px;
+    max-width: 285px;
+    background: linear-gradient(#043A41, #043A41) padding-box, linear-gradient(to bottom left, rgba(0, 224, 255, 0.1) 0%, rgba(0, 224, 255, 0.5) 50%, rgba(0, 224, 255, 0.1) 100%) border-box;
+    border: 0.5px solid transparent;
+    position: relative;
+    z-index: 3;
+}
+
+.hero__item img {
+    padding-bottom: 19px;
+}
+
+.hero__item {
+    padding: 40px 30px 40px 40px;
+    max-width: 285px;
+    width: 100%;
+}
+
+.hero__items-two .hero__item {
+    padding: 49px 78px 38px 42px;
+    max-width: 386px;
+    width: 100%;
+}
+
+.hero__items-two .hero__item:first-child {
+    padding: 56px 78px 38px 42px;
+    max-width: 386px;
+}
+
+
+/* .hero__item:nth-child(n + 6) {
+    padding: 37px 30px 38px 42px;
+    max-width: 386px;
+    width: 100%;
+}  */
+
+.hero__item::after {
+    content: "";
+    background-image: url('../img/decor/firefly.svg');
+    position: absolute;
+    width: 63px;
+    height: 32px;
+    left: 15px;
+    bottom: -20px;
+}
+
+.hero__item:nth-child(-n + 4):hover::after {
+    animation: moveleftRight 2.5s ease-in-out infinite;
+}
+
+.hero__item:nth-child(n + 5):hover::after {
+    animation: moveleftRightSecond 3s ease-in-out infinite;
+}
+
+@keyframes moveleftRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes moveleftRightSecond {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(300px);
+    }
 }

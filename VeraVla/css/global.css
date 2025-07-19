@@ -1,11 +1,323 @@
+:root {
+    --accent-text: #fff;
+    --accent-sec-text: #4abcec;
+    --trans: all .5s ease-in-out;
+}
+
 * {
     box-sizing: border-box;
 }
 
 .body {
     font-family: "Avenir Next Cyr", "Arial", sans-serif;
-    line-height: 1.5;
+    line-height: 1.2;
     font-size: 16px;
     color: var(--accent-text);
-    background-color: var(--bg-color);
+    /* background: linear-gradient(313deg, #022335 0%, #043a41 100%); */
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    height: 60px;
+    box-shadow: 0 7px 20px -7px #00e0ff;
+    background: linear-gradient(180deg, #03e1ffa8 0%, #13cdc2 100%);
+    cursor: pointer;
+    z-index: 1;
+    transition: var(--trans);
+}
+
+.button:hover {
+    box-shadow: none;
+}
+
+.number {
+    display: flex;
+    gap: 5px;
+    z-index: 1;
+    transition: var(--trans);
+}
+
+.number:hover {
+    color: var(--accent-sec-text);
+}
+
+/* =============== MODAL =============== */
+
+.title__modal {
+    margin: 70px 0 10px;
+    line-height: 0.9;
+    font-size: 42px;
+}
+
+/* ======== modal (first) ======== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff33;
+    padding: 15px;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    transition: var(--trans);
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal__window {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 428px;
+    width: 100%;
+    background: linear-gradient(313deg, #022335 0%, #043a41 100%);
+    border-radius: 20px;
+    padding: 0 60px 60px;
+    
+}
+
+.modal__window-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.modal__window-close:hover path,
+.modal__window-close:hover rect {
+    stroke: var(--accent-sec-text);
+}
+
+.modal__window-close path,
+.modal__window-close rect {
+    transition: var(--trans);
+}
+
+.modal__img {
+    position: absolute;
+    top: -65px;
+    left: 72px;
+}
+
+
+
+.modal__title span {
+    color: var(--accent-sec-text);
+}
+
+.modal__par {
+    padding-top: 30px;
+}
+
+.modal__form {
+    display: block;
+    width: 100%;
+}
+
+.modal__form-label {
+    margin-bottom: 10px;
+}
+
+.field {
+    position: relative;
+    display: block;
+}
+
+.field span {
+    position: absolute;
+    top: 12px;
+    left: 28px;
+    font-size: 11px;
+    color: var(--input-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--trans);
+}
+
+.field__input {
+    display: block;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 100px;
+    padding: 19px 41px 19px 28px;
+    background: #00000000;
+    font-size: 16px;
+    cursor: default;
+    transition: var(--trans);
+}
+
+.field__input:focus {
+    padding: 27px 41px 12px 28px;
+    font-size: 16px;
+}
+
+.field__input:focus+span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.field__input:hover {
+    border-color: var(--bg-accent);
+}
+
+.field__input::placeholder {
+    color: var(--input-color);
+    transition: var(--trans);
+}
+
+.field__input:hover::placeholder {
+    color: var(--bg-accent);
+}
+
+/* ===== modal-second ===== */
+
+
+
+.modal__inner {
+    max-width: 590px;
+    width: 100%;
+
+}
+
+.modal__window-close--second {
+    position: absolute;
+    top: 135px;
+    right: 515px;
+}
+
+
+.modal__window-sec {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.53);
+    background: linear-gradient(313deg, #033958 0%, #0f6b78 100%);
+    
+}
+
+
+
+.modal__title--second {
+    font-weight: 500;
+    font-size: 33px;
+    text-transform: uppercase;
+    max-width: 420px;
+    width: 100%;
+
+}
+
+.modal__form {}
+
+.modal__form-label-second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0 30px;
+}
+
+.field__input-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.field__input-sec {
+    display: block;
+    /* justify-self: center; */
+    width: 427px;
+    height: 60px;
+    border: 1px solid transparent;
+    background: linear-gradient(313deg, #0339588b, #0f6c784f) padding-box, linear-gradient(to bottom left, rgba(0, 224, 255, 0.1) 0%, rgba(0, 224, 255, 0.5) 50%, rgba(0, 224, 255, 0.1) 100%) border-box;
+    border-radius: 9px;
+    font-size: 16px;
+    cursor: default;
+    transition: var(--trans);
+}
+
+/* ===== headphone-button ===== */
+
+.headphone-button {
+    position: fixed;
+    top: 150px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    /* border: 10px solid #fff; */
+    background: linear-gradient(180deg, rgba(3, 225, 255, 0.66) 0%, #13cdc2 100%);
+    box-shadow: 0 7px 20px -7px #00e0ff;
+    transition: var(--trans);
+    ;
+    z-index: 5;
+}
+
+.headphone-button path {
+    transition: var(--trans);
+}
+
+.headphone-button:hover path {
+    fill: var(--accent-sec-text);
+}
+
+.headphone-button:hover {
+    color: var(--accent-sec-text);
+    box-shadow: none;
+
+}
+
+.headphone-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff00;
+    border: 10px solid #ffffff22;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transition: var(--trans);
+}
+
+.headphone-button:hover::after {
+    display: none;
+}
+
+.headphone-button__text {
+    position: fixed;
+    top: 350px;
+    left: -23px;
+    transform: rotate(-90deg);
+    z-index: 2;
 }

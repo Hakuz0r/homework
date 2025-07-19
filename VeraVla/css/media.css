@@ -1,0 +1,280 @@
+/* ============== meadia ==============  */
+
+@media (max-width: 1400px) {
+
+    /* ===== headphone button ===== */
+
+    .headphone-button {
+        position: absolute;
+        top: 150px;
+        left: 10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background: linear-gradient(180deg, rgba(3, 225, 255, 0.66) 0%, #13cdc2 100%);
+        box-shadow: 0 7px 20px -7px #00e0ff;
+        transition: var(--trans);
+        z-index: 5;
+    }
+
+    .headphone-button__text {
+        position: absolute;
+        top: 45px;
+        left: 115px;
+        /* left: 115px; */
+        /* top: 350px; */
+        /* left: -23px; */
+        transform: rotate(360deg);
+        z-index: 2;
+        width: 170px;
+    }
+
+    /* ===== header section ===== */
+
+
+    /* ===== footer ===== */
+
+    .footer__copyright::after,
+    .footer__copyright::before {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    /* section (hero) */
+
+    .hero__items {
+        font-size: 14px;
+
+    }
+
+    .hero__items .hero__items-one {
+        display: flex;
+        gap: 10px;
+    }
+
+    .hero__items .hero__items-two {
+        display: flex;
+        gap: 10px;
+    }
+
+    .hero__items .hero__items-one {
+        display: flex;
+        gap: 10px;
+    }
+
+    .hero__items-two {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+
+    }
+
+    .hero__items .hero__items-two .hero__item {
+        padding: 49px 30px 38px 42px;
+        max-width: 269px;
+        width: 100%;
+    }
+
+    .hero__items .hero__items-two .hero__item.hero__item--custom {
+        padding: 56px 78px 38px 42px;
+        max-width: 269px;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    /* ====== header ====== */
+
+    .header__bg-left-img {
+        display: none;
+    }
+
+    .header__bg-up-img {
+        display: none;
+    }
+
+    .header__img-ner {
+        max-width: 1211px;
+        /* display: none; */
+    }
+
+    .header__img-ner {
+        opacity: 0.5;
+    }
+
+    .header__section {
+        display: flex;
+        justify-content: center;
+        margin: 0px 0 90px 0;
+        z-index: 1;
+    }
+
+    /* ====== section (hero) ====== */
+
+    .hero__items-one,
+    .hero__items-two {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    /* ====== footer ====== */
+
+    .footer__top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 65px 0 57px;
+        gap: 20px;
+    }
+
+
+
+
+}
+
+@media (max-width: 700px) {
+
+    /* ====== header ====== */
+
+    .section__opening {
+        text-align: center;
+    }
+
+    .section__opening span {
+        color: var(--accent-text);
+    }
+
+    .section__opening-title {
+        font-size: 84px;
+    }
+
+    .section__opening-subtitle {
+        max-width: 400px;
+        justify-self: center;
+        font-size: 14px;
+        max-width: 300px;
+    }
+
+    .section__guarantee {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .section__guarantee-img {
+        display: none;
+    }
+
+    .header__button {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .header__button-first {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    /* ====== footer ====== */
+
+    .footer__logo {
+        align-self: center;
+    }
+
+    .footer__top {
+        gap: 40px;
+    }
+
+    .footer__contacts {
+        align-self: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__contacts span:nth-child(3) {
+        display: none;
+    }
+
+    .footer__mail {
+        padding: 0;
+    }
+
+    .footer__bottom {
+        align-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* === headphone button === */
+
+    .headphone-button {
+        position: absolute;
+        top: 200px;
+        left: 0px;
+    }
+
+    /* ======= header ======= */
+
+    .header__top {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section__opening-title {
+        font-size: 54px;
+    }
+
+    .section__guarantee {
+        display: flex;
+        gap: 33px;
+        padding-bottom: 50px;
+    }
+
+    .section__guarantee-text span {
+        display: inline-block;
+        font-size: 14px;
+    }
+
+
+    .header__button-second {
+        display: none;
+    }
+
+    /* === section (hero) === */
+
+    .hero__title {
+        font-size: 37px;
+        max-width: 530px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    /* ====== header ====== */
+
+    .header__button-first {
+        height: 40px;
+        font-size: 13px;
+    }
+
+    /* === section (hero) === */
+
+    .hero__title {
+        font-size: 33px;
+        max-width: 530px;
+    }
+
+    /* ====== footer ====== */
+
+    .footer__copyright {
+        font-size: 14px;
+    }
+}

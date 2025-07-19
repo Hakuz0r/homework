@@ -1,12 +1,297 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="css/style.css" rel="stylesheet">
+    <title>VeraVla edu</title>
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
-<body>
-    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam sunt vitae corrupti perferendis magni quasi, dolor facilis quo accusantium pariatur!</div>
+
+<body class="body">
+    <div class="wrapper">
+        <button class="headphone-button" data-modal="modal2">
+            <svg width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M20 0.799988C13.1438 0.799988 7.39375 5.62499 5.95 12.05C6.09688 12.0344 6.25 12 6.4 12C6.80938 12 7.20312 12.0844 7.575 12.2C8.93125 6.59061 13.9781 2.39999 20 2.39999C26.0188 2.39999 31.0688 6.59061 32.425 12.2C32.7969 12.0844 33.1875 12 33.6 12C33.75 12 33.9031 12.0344 34.05 12.05C32.6063 5.62499 26.8531 0.799988 20 0.799988ZM6.4 13.6C5.07812 13.6 4 14.6781 4 16V28C4 29.3219 5.07812 30.4 6.4 30.4C7.72188 30.4 8.8 29.3219 8.8 28V16C8.8 14.6781 7.72188 13.6 6.4 13.6ZM33.6 13.6C32.2781 13.6 31.2 14.6781 31.2 16V28C31.2 29.3219 32.2781 30.4 33.6 30.4C34.9219 30.4 36 29.3219 36 28V16C36 14.6781 34.9219 13.6 33.6 13.6ZM2.4 16.1C0.95625 17.2594 0 19.4344 0 22C0 24.5656 0.95625 26.7406 2.4 27.9V16.1ZM37.6 16.1V27.9C39.0438 26.7406 40 24.5656 40 22C40 19.4344 39.0438 17.2594 37.6 16.1ZM32.475 31.825C31.7688 33.9969 29.9344 35.2 27.2 35.2H26.325C26.3781 35.4594 26.4 35.725 26.4 36C26.4 36.275 26.3781 36.5406 26.325 36.8H27.2C30.7938 36.8 33.2812 34.9937 34.1 31.95C33.9313 31.9719 33.7719 32 33.6 32C33.2062 32 32.8344 31.9312 32.475 31.825ZM18.4 33.6C17.0781 33.6 16 34.6781 16 36C16 37.3219 17.0781 38.4 18.4 38.4H22.4C23.7219 38.4 24.8 37.3219 24.8 36C24.8 34.6781 23.7219 33.6 22.4 33.6H18.4Z"
+                    fill="white" />
+            </svg>
+            <span class="headphone-button__rings"></span>
+            <span class="headphone-button__text">Бесплатная консультация</span>
+        </button>
+        <header class="header">
+            <div class="header__bg-left-img">
+                <img src="img/decor/bg-left.png" alt="">
+            </div>
+            <div class="header__bg-up-img">
+                <img src="img/decor/bg-up.png" alt="">
+            </div>
+            <div class="header__img-ner">
+                <img src="img/decor/Neuronchek.png" alt="">
+            </div>
+            <div class="container">
+                <div class="header__top">
+                    <a class="header__logo" href="#">
+                        <img src="img/icons/logos/logo.png" alt="Логотип компании VeraVla edu">
+                    </a>
+                    <a class="header__number number" href="tel:+821075269192 ">
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.92002 0.494151C4.53526 0.462901 4.10752 0.574229 3.71299 0.851573C3.36533 1.09376 2.61533 1.68946 1.91416 2.36329C1.56455 2.69923 1.23057 3.04884 0.972757 3.39259C0.712991 3.73634 0.486428 4.05079 0.5001 4.50782C0.513772 4.91798 0.554788 6.13087 1.42783 7.99024C2.30088 9.84767 3.99424 12.3965 7.29698 15.7012C10.6017 19.0059 13.1505 20.6992 15.0079 21.5723C16.8653 22.4453 18.0802 22.4863 18.4903 22.5C18.9454 22.5137 19.2599 22.2871 19.6036 22.0274C19.9474 21.7676 20.297 21.4356 20.6329 21.0859C21.3048 20.3848 21.9005 19.6348 22.1427 19.2871C22.6954 18.5 22.6036 17.5703 21.9884 17.1387C21.6017 16.8672 18.045 14.5 17.5099 14.1719C16.9669 13.8399 16.3419 13.9902 15.7833 14.2852C15.3439 14.5176 14.1544 15.1992 13.8146 15.3945C13.5587 15.2324 12.588 14.5859 10.5001 12.4981C8.41026 10.4102 7.76573 9.43946 7.60362 9.1836C7.79893 8.84376 8.47862 7.66017 8.71299 7.2129C9.00596 6.65626 9.17002 6.0254 8.82041 5.47853C8.67393 5.2461 8.00791 4.23243 7.33604 3.21485C6.66221 2.19728 6.02354 1.23243 5.85752 1.00196V1.00001C5.64073 0.701182 5.30283 0.525401 4.92002 0.494151ZM4.82823 1.51564C4.96494 1.53321 5.04698 1.5879 5.04698 1.5879C5.12705 1.69923 5.82823 2.75001 6.5001 3.76564C7.17198 4.78321 7.85752 5.82618 7.97666 6.01564C7.99619 6.04493 8.02354 6.37696 7.82823 6.7461V6.74806C7.60752 7.16798 6.57823 8.96681 6.57823 8.96681L6.43565 9.21876L6.58213 9.46876C6.58213 9.46876 7.34971 10.7637 9.79112 13.2051C12.2345 15.6465 13.5294 16.416 13.5294 16.416L13.7794 16.5625L14.0314 16.4199C14.0314 16.4199 15.8263 15.3926 16.2501 15.1699C16.6192 14.9766 16.9513 15.002 16.9903 15.0254C17.336 15.2383 21.1778 17.791 21.4142 17.957C21.422 17.9629 21.631 18.2793 21.3263 18.7129H21.3243C21.1407 18.9766 20.5392 19.7402 19.9122 20.3926C19.5978 20.7188 19.2755 21.0234 19.0021 21.2285C18.7286 21.4336 18.4845 21.4981 18.5235 21.5C18.0978 21.4863 17.1583 21.4766 15.4337 20.666C13.7091 19.8574 11.2481 18.2383 8.00401 14.9922C4.76182 11.75 3.14268 9.28907 2.33213 7.56251C1.52354 5.8379 1.51377 4.89845 1.5001 4.47462C1.50205 4.51368 1.56651 4.26759 1.77158 3.99415C1.97666 3.72071 2.2794 3.39649 2.60557 3.08204C3.25987 2.45509 4.02158 1.85353 4.28526 1.66993V1.67189C4.50205 1.51954 4.69151 1.50001 4.82823 1.51564Z"
+                                fill="url(#paint0_linear_0_32)" />
+                            <defs>
+                                <linearGradient id="paint0_linear_0_32" x1="11.5039" y1="0.489044" x2="11.5039"
+                                    y2="22.5006" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#4ABCEC" />
+                                    <stop offset="1" stop-color="#4A8BEC" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        + 82 (10) 7526-9192
+                    </a>
+                </div>
+                <section class="header__section">
+                    <div class="section__inner">
+                        <div class="section__opening">
+                            <span>
+                                Добро пожаловать в онлайн школу
+                            </span>
+                            <h1 class="section__opening-title">
+                                VeraVla edu!
+                            </h1>
+                            <h2 class="section__opening-subtitle">
+                                Переквалифицируйся в разработчика искусственного интеллекта и получи
+                                высокооплачиваемую
+                                работу
+                            </h2>
+                        </div>
+                        <div class="section__guarantee">
+                            <div class="section__guarantee-img">
+                                <img src="img/decor/reasons/print.svg" alt="">
+                            </div>
+                            <div class="section__guarantee-text">
+                                Мы обучаем с гарантией!
+                                <span>
+                                    Первый месяц действует гарантия 100% возврата
+                                </span>
+                                <span>
+                                    денег, если тебя не устроят наши курсы
+                                </span>
+                            </div>
+                        </div>
+                        <div class="header__button">
+                            <a class="header__button-first button" data-modal="modal1">
+                                Записаться на ознакомительный вебинар
+                            </a>
+                            <a class="header__button-second" href="#">
+                                <span></span>
+                                <span>листайте вниз</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </header>
+        <main class="main">
+            <section class="main__hero">
+                <div class="container">
+                    <div class="hero__title">
+                        <span>7 причин</span> почему именно мы?
+                    </div>
+                    <div class="hero__items">
+                        <div class="hero__items-one">
+                            <div class="hero__item">
+                                <img src="img/decor/reasons/man.svg" alt="">
+                                <p class="hero__item-text">
+                                    Ты станешь востребованным специалистом в области искусственного интеллекта
+                                </p>
+                            </div>
+                            <div class="hero__item">
+                                <img src="img/decor/reasons/squares.png" alt="">
+                                <p class="hero__item-text">
+                                    Будешь создавать свои модели искусственного интеллекта на языке программирования
+                                    Python
+                                </p>
+                            </div>
+                            <div class="hero__item">
+                                <img src="img/decor/reasons/database.svg" alt="">
+                                <p class="hero__item-text">
+                                    Сумеешь создавать программы, связанные
+                                    с компьютерным зрением и нейронными сетями.
+                                </p>
+                            </div>
+                            <div class="hero__item">
+                                <img src="img/decor/reasons/form.svg" alt="">
+                                <p class="hero__item-text">
+                                    Мы обучаем только тому, что тебе пригодится
+                                    во время работы!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="hero__items-two">
+                            <div class="hero__item hero__item--custom">
+                                <img src="img/decor/reasons/men.svg" alt="">
+                                <p class="hero__item-text">
+                                    Ты найдешь единомышленников,
+                                    с которыми сможешь создавать свои проекты
+                                </p>
+                            </div>
+                            <div class="hero__item">
+                                <img src="img/decor/reasons/men-2.svg" alt="">
+                                <p class="hero__item-text">
+                                    Мы создаём сообщество профессионалов, таких же как и мы, жаждущих развивать и
+                                    изменять
+                                    этот
+                                    мир к лучшему с помощью IT технологий
+                                </p>
+                            </div>
+                            <div class="hero__item">
+                                <img src="img/decor/reasons/buildings.svg" alt="">
+                                <p class="hero__item-text">
+                                    После успешного завершения курса, мы поможем тебе трудоустроиться
+                                    в Южнокорейские IT компании!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__top">
+                        <a class="footer__logo" href="#">
+                            <img src="img/icons/logos/logo.png" alt="Логотип компании VeraVla edu">
+                        </a>
+                        <div class="footer__contacts">
+                            <div class="footer__mail">
+                                <svg width="25" height="18" viewBox="0 0 25 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 0V0.5V18H25V0H0ZM1 1H24V2.28125C23.7774 2.47479 14.9085 10.1857 14.1729 10.8232C13.5269 11.3831 12.8391 11.501 12.5 11.501C12.1609 11.501 11.4731 11.3831 10.8271 10.8232C10.6417 10.6625 9.31134 9.50583 8.34961 8.66992L8.33984 8.65723L8.33789 8.65918C5.48222 6.1771 1.1662 2.42576 1 2.28125V1ZM1 3.60254C1.87369 4.36228 4.92064 7.01119 7.54102 9.28906L1 14.457V3.60254ZM24 3.60254V14.459L17.4453 9.30078C20.0643 7.02411 23.1245 4.36386 24 3.60254ZM8.30859 9.95703C8.92647 10.4941 10.0314 11.4546 10.1729 11.5771C11.0269 12.3173 11.9391 12.499 12.5 12.499C13.0609 12.499 13.9731 12.3173 14.8271 11.5771C14.9675 11.4555 16.0663 10.4993 16.6768 9.96875L24 15.7324V17H1V15.7324L8.30859 9.95703Z"
+                                        fill="url(#paint0_linear_0_427)" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_0_427" x1="12.5" y1="0" x2="12.5" y2="18"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#4ABCEC" />
+                                            <stop offset="1" stop-color="#4A8BEC" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <span>info@veravla-edu.online</span>
+                            </div>
+                            <a class="footer__number number" href="tel:+821075269192 ">
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.92002 0.494151C4.53526 0.462901 4.10752 0.574229 3.71299 0.851573C3.36533 1.09376 2.61533 1.68946 1.91416 2.36329C1.56455 2.69923 1.23057 3.04884 0.972757 3.39259C0.712991 3.73634 0.486428 4.05079 0.5001 4.50782C0.513772 4.91798 0.554788 6.13087 1.42783 7.99024C2.30088 9.84767 3.99424 12.3965 7.29698 15.7012C10.6017 19.0059 13.1505 20.6992 15.0079 21.5723C16.8653 22.4453 18.0802 22.4863 18.4903 22.5C18.9454 22.5137 19.2599 22.2871 19.6036 22.0274C19.9474 21.7676 20.297 21.4356 20.6329 21.0859C21.3048 20.3848 21.9005 19.6348 22.1427 19.2871C22.6954 18.5 22.6036 17.5703 21.9884 17.1387C21.6017 16.8672 18.045 14.5 17.5099 14.1719C16.9669 13.8399 16.3419 13.9902 15.7833 14.2852C15.3439 14.5176 14.1544 15.1992 13.8146 15.3945C13.5587 15.2324 12.588 14.5859 10.5001 12.4981C8.41026 10.4102 7.76573 9.43946 7.60362 9.1836C7.79893 8.84376 8.47862 7.66017 8.71299 7.2129C9.00596 6.65626 9.17002 6.0254 8.82041 5.47853C8.67393 5.2461 8.00791 4.23243 7.33604 3.21485C6.66221 2.19728 6.02354 1.23243 5.85752 1.00196V1.00001C5.64073 0.701182 5.30283 0.525401 4.92002 0.494151ZM4.82823 1.51564C4.96494 1.53321 5.04698 1.5879 5.04698 1.5879C5.12705 1.69923 5.82823 2.75001 6.5001 3.76564C7.17198 4.78321 7.85752 5.82618 7.97666 6.01564C7.99619 6.04493 8.02354 6.37696 7.82823 6.7461V6.74806C7.60752 7.16798 6.57823 8.96681 6.57823 8.96681L6.43565 9.21876L6.58213 9.46876C6.58213 9.46876 7.34971 10.7637 9.79112 13.2051C12.2345 15.6465 13.5294 16.416 13.5294 16.416L13.7794 16.5625L14.0314 16.4199C14.0314 16.4199 15.8263 15.3926 16.2501 15.1699C16.6192 14.9766 16.9513 15.002 16.9903 15.0254C17.336 15.2383 21.1778 17.791 21.4142 17.957C21.422 17.9629 21.631 18.2793 21.3263 18.7129H21.3243C21.1407 18.9766 20.5392 19.7402 19.9122 20.3926C19.5978 20.7188 19.2755 21.0234 19.0021 21.2285C18.7286 21.4336 18.4845 21.4981 18.5235 21.5C18.0978 21.4863 17.1583 21.4766 15.4337 20.666C13.7091 19.8574 11.2481 18.2383 8.00401 14.9922C4.76182 11.75 3.14268 9.28907 2.33213 7.56251C1.52354 5.8379 1.51377 4.89845 1.5001 4.47462C1.50205 4.51368 1.56651 4.26759 1.77158 3.99415C1.97666 3.72071 2.2794 3.39649 2.60557 3.08204C3.25987 2.45509 4.02158 1.85353 4.28526 1.66993V1.67189C4.50205 1.51954 4.69151 1.50001 4.82823 1.51564Z"
+                                        fill="url(#paint0_linear_0_32)" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_0_32" x1="11.5039" y1="0.489044" x2="11.5039"
+                                            y2="22.5006" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#4ABCEC" />
+                                            <stop offset="1" stop-color="#4A8BEC" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                + 82 (10) 7526-9192
+                            </a>
+                            <span>Мы в соц сетях:</span>
+                            <div class="footer__socials">
+                                <a class="footer__socials-icons" href="#">
+                                    <img src="img/icons/socials/facebook.svg" alt="">
+                                </a>
+                                <a class="footer__socials-icons" href="#">
+                                    <img src="img/icons/socials/lightning.svg" alt="">
+                                </a>
+                                <a class="footer__socials-icons" href="#">
+                                    <img src="img/icons/socials/youtube.svg" alt="">
+                                </a>
+                                <a class="footer__socials-icons" href="#">
+                                    <img src="img/icons/socials/message-call.svg" alt="">
+                                </a>
+                                <a class="footer__socials-icons" href="#">
+                                    <img src="img/icons/socials/message-talk.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__copyright">
+                        Copyright © 2021 VeraVla edu. All rights reserved
+                    </div>
+                    <div class="footer__bottom">
+                        <span>developed by afreeca</span>
+                        <a class="footer__bottom-logo" href="#">
+                            <img src="img/icons/logos/afreeca-logo.png" alt="Логотип компании">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="modal" id="modal1">
+            <div class="modal__window">
+                <a class="modal__window-close" href="#" data-modal="modal1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.75" y="0.75" width="22.5" height="22.5" rx="11.25" stroke="#E1D9E1"
+                            stroke-width="1.5" />
+                        <path
+                            d="M6.75781 17.2433L12.0008 12.0003L17.2438 17.2433M17.2438 6.75732L11.9998 12.0003L6.75781 6.75732"
+                            stroke="#E1D9E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <h3 class="modal__title title__modal">
+                    <span>Записаться</span>
+                    на ознакомительный вебинар
+                </h3>
+                <p class="modal__par">
+                    К сожалению, на данный момент мы не проводим ознакомительные вебинары.
+                </p>
+            </div>
+        </div>
+        <div class="modal modal--second" id="modal2">
+            <div class="modal__inner">
+                <a class="modal__window-close--second" href="#" data-modal="modal2">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.06077 2L20.0608 20M19.9395 2L1.93945 20" stroke="#00E0FF" stroke-width="3" />
+                    </svg>
+                </a>
+                <div class="modal__window-sec">
+                    <h3 class="modal__title modal__title--second">
+                        <span>Записаться</span>
+                        на ознакомительный вебинар
+                    </h3>
+                    <form class="modal__form">
+                        <label class="modal__form-label-second field-second">
+                            <div class="field__input-inner">
+                                <span>Ваше ФИО</span>
+                                <input class="field__input-sec" type="text" placeholder="введите ФИО:">
+                            </div>
+                            <div class="field__input-inner">
+                                <span>Ваше ФИО</span>
+                                <input class="field__input-sec" type="text" placeholder="введите ФИО:">
+                            </div>
+                            <div class="field__input-inner">
+                                <span>Ваше ФИО</span>
+                                <input class="field__input-sec" type="text" placeholder="введите ФИО:">
+                            </div>
+                            <div class="field__input-inner">
+                                <span>Ваше ФИО</span>
+                                <input class="field__input-sec" type="text" placeholder="введите ФИО:">
+                            </div>
+
+                        </label>
+                        <button class="modal__button button" type="submit">
+                            Получить подарок
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
