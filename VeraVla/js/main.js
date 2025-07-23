@@ -21,7 +21,7 @@
 
         const consultationButton = e.target.closest('.button')
         const closeButton = e.target.closest('.modal__window-close')
-        const openButtonFirst = e.target.closest('.section__button-first')
+        const openButtonFirst = e.target.closest('.header__button-first')
         const openButtonSecond = e.target.closest('.headphone-button')
 
         if (consultationButton) {

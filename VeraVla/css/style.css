@@ -1,21 +1,8 @@
-
-
 /* ========= main (hero) ========== */
 
 .main__hero {
     background: linear-gradient(313deg, #043a41 0%, #022335 100%);
 
-}
-
-.main__hero::before,
-.main__hero::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(180deg, rgba(0, 224, 255, 0.11) 0%, rgba(0, 224, 255, 0.11) 100%);
-    box-shadow: 0 0 24px 0 #00e0ff, 0 4px 15px 0 #4ad9ec, 0 3px 15px 0 rgba(0, 224, 255, 0.93);
 }
 
 .hero__title {
@@ -42,13 +29,12 @@
 
 .hero__items-one {
     display: flex;
-    /* justify-content: space-between; */
     gap: 20px;
+    width: 100%;
 }
 
 .hero__items-two {
     display: flex;
-    /* justify-content: space-between; */
     gap: 20px;
 }
 
@@ -82,13 +68,6 @@
     max-width: 386px;
 }
 
-
-/* .hero__item:nth-child(n + 6) {
-    padding: 37px 30px 38px 42px;
-    max-width: 386px;
-    width: 100%;
-}  */
-
 .hero__item::after {
     content: "";
     background-image: url('../img/decor/firefly.svg');
@@ -99,22 +78,23 @@
     bottom: -20px;
 }
 
-.hero__item:nth-child(-n + 4):hover::after {
+.first-anim:hover::after {
     animation: moveleftRight 2.5s ease-in-out infinite;
-}
-
-.hero__item:nth-child(n + 5):hover::after {
-    animation: moveleftRightSecond 3s ease-in-out infinite;
 }
 
 @keyframes moveleftRight {
     0% {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
 
     50% {
         transform: translateX(200px);
     }
+
+}
+
+.second-anim:hover::after {
+    animation: moveleftRightSecond 3s ease-in-out infinite;
 }
 
 @keyframes moveleftRightSecond {
@@ -125,4 +105,137 @@
     50% {
         transform: translateX(300px);
     }
+}
+
+/* ====== main(about-ai) ====== */
+
+.main__about-ai {
+    background: var(--accent-bg);
+    position: relative;
+}
+
+.about-ai__wrapper::after {
+    position: absolute;
+    content: " ";
+    bottom: 65px;
+    right: 0;
+    max-width: 937px;
+    width: 100%;
+    max-height: 627px;
+    height: 100%;
+    background: url("../img/decor/bg-ai.png");
+    box-shadow: inset 0 0 110px 14px #000;
+    mix-blend-mode: lighten;
+}
+
+.about-ai__inner {
+    padding: 117px 0 109px;
+}
+
+.about-ai__title {
+    font-weight: 500;
+    font-size: 54px;
+    max-width: 750px;
+    text-transform: uppercase;
+    color: #4abcec;
+}
+
+.about-ai__title span {
+    color: var(--accent-text);
+}
+
+.about-ai__info-inner {
+    padding: 64px 0 69px;
+}
+
+.about-ai__info {
+    display: flex;
+    max-width: 710px;
+    gap: 20px;
+
+}
+
+.block1,
+.block2,
+.block3,
+.block4 {
+    background: linear-gradient(90deg, rgba(31, 63, 77, 0.54) 0%, rgba(31, 75, 94, 0) 100%);
+    margin-bottom: 5px;
+    padding: 20px 0 20px 20px;
+    /* padding-top: 15px; */
+}
+
+
+.about-ai__info img {
+    align-self: start;
+}
+
+.info__text {
+    align-self: center;
+    position: relative;
+}
+
+.info__text::after {
+    content: "";
+    background-image: url('../img/decor/firefly.svg');
+    position: absolute;
+    top: -5px;
+    left: -15px;
+    width: 63px;
+    height: 32px;
+    z-index: 1;
+}
+
+/* ===== main (ai-important) ====== */
+
+.main__ai-important {
+    background: var(--accent-bg-second);
+
+}
+
+.ai-important__title {
+    padding-top: 105px;
+}
+
+.ai-important__title span {
+    color: var(--accent-text);
+}
+
+.ai-important__inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 46px 0 129px;
+}
+
+.ai-important__block-text {
+    display: flex;
+    gap: 20px;
+}
+
+.ai-important__block-text p {
+    align-self: center;
+}
+
+.ai-important__block-text:first-child {
+    margin-right: 42px;
+}
+
+.ai-important__block-text:last-child {
+    margin-left: 74px;
+}
+
+.ai-important__block-text:nth-child(3) {
+    margin-left: 49px;
+}
+
+.ai-important__block-text:nth-child(-n + 2) {
+    max-width: 568px;
+
+}
+
+.ai-important__block-text:nth-child(n + 3) {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 46px;
+    max-width: 531px;
 }

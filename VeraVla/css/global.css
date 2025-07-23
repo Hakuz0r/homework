@@ -1,6 +1,9 @@
 :root {
     --accent-text: #fff;
     --accent-sec-text: #4abcec;
+    --accent-color: #00e0ff;
+    --accent-bg: linear-gradient(313deg, #022335 0%, #043a41 100%);
+    --accent-bg-second: linear-gradient(313deg, #043a41 0%, #022335 100%);
     --trans: all .5s ease-in-out;
 }
 
@@ -13,7 +16,6 @@
     line-height: 1.2;
     font-size: 16px;
     color: var(--accent-text);
-    /* background: linear-gradient(313deg, #022335 0%, #043a41 100%); */
 }
 
 .main {
@@ -41,8 +43,10 @@
     justify-content: center;
     align-items: center;
     border-radius: 9px;
+    max-width: 427px;
+    width: 100%;
     height: 60px;
-    box-shadow: 0 7px 20px -7px #00e0ff;
+    box-shadow: 0 7px 20px -7px var(--accent-color);
     background: linear-gradient(180deg, #03e1ffa8 0%, #13cdc2 100%);
     cursor: pointer;
     z-index: 1;
@@ -62,6 +66,26 @@
 
 .number:hover {
     color: var(--accent-sec-text);
+}
+
+.title {
+    font-weight: 500;
+    font-size: 54px;
+    text-transform: uppercase;
+    color: var(--accent-sec-text);
+}
+
+/* ======== BORDER ======== */
+
+.section-border::before,
+.section-border::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(180deg, rgba(0, 224, 255, 0.11) 0%, rgba(0, 224, 255, 0.11) 100%);
+    box-shadow: 0 0 24px 0 var(--accent-color), 0 4px 15px 0 #4ad9ec, 0 3px 15px 0 rgba(0, 224, 255, 0.93);
 }
 
 /* =============== MODAL =============== */
@@ -99,10 +123,10 @@
     align-items: center;
     max-width: 428px;
     width: 100%;
-    background: linear-gradient(313deg, #022335 0%, #043a41 100%);
+    background: var(--accent-bg);
     border-radius: 20px;
     padding: 0 60px 60px;
-    
+
 }
 
 .modal__window-close {
@@ -223,7 +247,7 @@
     border-radius: 20px;
     box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.53);
     background: linear-gradient(313deg, #033958 0%, #0f6b78 100%);
-    
+    padding: 0 15px;
 }
 
 
@@ -234,10 +258,12 @@
     text-transform: uppercase;
     max-width: 420px;
     width: 100%;
-
+    padding-top: 54px;
 }
 
-.modal__form {}
+.modal__form {
+    padding-bottom: 25px;
+}
 
 .modal__form-label-second {
     display: flex;
@@ -251,19 +277,39 @@
     display: flex;
     flex-direction: column;
     gap: 7px;
+    max-width: 427px;
+    width: 100%;
 }
+
+.field__input-inner span {
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--accent-color);
+}
+
+
 
 .field__input-sec {
     display: block;
-    /* justify-self: center; */
-    width: 427px;
     height: 60px;
+    padding-left: 10px;
     border: 1px solid transparent;
     background: linear-gradient(313deg, #0339588b, #0f6c784f) padding-box, linear-gradient(to bottom left, rgba(0, 224, 255, 0.1) 0%, rgba(0, 224, 255, 0.5) 50%, rgba(0, 224, 255, 0.1) 100%) border-box;
     border-radius: 9px;
     font-size: 16px;
     cursor: default;
     transition: var(--trans);
+}
+
+.field__input-sec:focus {
+    padding: 21px 57px 21px 21px;
+    font-size: 15px;
+}
+
+.modal__button-second {
+    justify-self: center;
+    margin-bottom: 65px;
 }
 
 /* ===== headphone-button ===== */
@@ -277,7 +323,7 @@
     border-radius: 100%;
     /* border: 10px solid #fff; */
     background: linear-gradient(180deg, rgba(3, 225, 255, 0.66) 0%, #13cdc2 100%);
-    box-shadow: 0 7px 20px -7px #00e0ff;
+    box-shadow: 0 7px 20px -7px var(--accent-color);
     transition: var(--trans);
     ;
     z-index: 5;

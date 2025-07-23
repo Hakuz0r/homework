@@ -149,7 +149,7 @@
 
 .section__guarantee-text span {
     font-weight: 500;
-    color: #00e0ff;
+    color: var(--accent-color);
 }
 
 .section__guarantee-text span:first-child {
