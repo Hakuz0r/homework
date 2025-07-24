@@ -239,3 +239,197 @@
     padding-top: 46px;
     max-width: 531px;
 }
+
+/* ====== main (about-us) ====== */
+
+.main__about-us {
+    background: var(--accent-bg);
+    position: relative;
+}
+
+.about-us__wrapper::after {
+    position: absolute;
+    content: '';
+    bottom: 50px;
+    /* right: -350px; */
+    right: -100px;
+    max-width: 937px;
+    width: 100%;
+    max-height: 709px;
+    height: 100%;
+    background: url("../img/decor/bg-brain.png");
+    box-shadow: inset 100px 0 143px 76px #000;
+    mix-blend-mode: lighten;
+    z-index: 0;
+}
+
+
+
+.about-us__inner {
+    padding: 104px 0 116px;
+}
+
+.about-us__title {
+    max-width: 871px;
+}
+
+.about-us__title span {
+    color: var(--accent-text);
+}
+
+.about-us__info {
+    padding-bottom: 53px;
+}
+
+.about-us__description {
+    display: flex;
+    gap: 21px;
+    height: 52px;
+    max-width: 690px;
+    margin: 38px 0 25px;
+}
+
+
+
+.about-us__description:first-child {
+    height: 36px;
+}
+
+.about-us__description:last-child {
+    height: 98px;
+    margin: 0;
+}
+
+.about-us__description img {
+    align-self: start;
+}
+
+.about-us__description p {
+    font-weight: 500;
+    line-height: 1.44;
+    padding-top: 11px;
+    position: relative;
+}
+
+.about-us__description p::after {
+    content: "";
+    background-image: url('../img/decor/firefly.svg');
+    position: absolute;
+    top: 6px;
+    left: -15px;
+    width: 63px;
+    height: 32px;
+    z-index: 1;
+}
+
+/* ========== section (about-course) ========== */
+
+.main__about-course {
+    background: var(--accent-bg-second);
+}
+
+.about-course__inner {}
+
+
+.about-course__title {
+    font-weight: 500;
+}
+
+.about-course__title span {
+    color: var(--accent-text);
+}
+
+.about-course__content {}
+
+.accordion-list {}
+
+.accordion-list__item {
+
+    /* margin-bottom: 20px; */
+}
+
+.accordion-list__control {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(313deg, #073447 0%, #08262b 100%);
+    height: 56px;
+}
+
+.accordion-list__control img {}
+
+.accordion-list__control-title {
+    font-weight: 750;
+    font-size: 20px;
+    line-height: 1.05;
+
+}
+
+.accordion-list__control-title span {
+    font-weight: 500;
+    font-size: 15px;
+    color: #08b1b9;
+}
+
+.accordion-list__control-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(#043A41, #043A41) padding-box, linear-gradient(to bottom left, rgba(0, 224, 255, 0.1) 0%, rgba(0, 224, 255, 0.5) 50%, rgba(0, 224, 255, 0.1) 100%) border-box;
+    border: 1px solid transparent;
+    margin-left: 750px;
+}
+
+.accordion-list__control-icon svg {
+    transition: var(--trans);
+}
+
+
+.accordion-list__item--opened .accordion-list__control-icon svg {
+    transition: var(--trans);
+    transform: rotate(180deg);
+
+}
+
+/* === accordion content === */
+
+.accordion-list__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--trans);
+
+}
+
+.accordion__content {}
+
+.accordion__content-inner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.accordion__content-numeration {
+    width: 27px;
+    height: 27px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4abcec;
+}
+
+.accordion__content-numeration span {
+    font-weight: 750;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #08262b;
+}
+
+.accordion__content-title {}
+
+.accordion__content-text {
+    padding-left: 43px;
+}

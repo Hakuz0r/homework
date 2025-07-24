@@ -61,8 +61,15 @@
         width: 170px;
     }
 
-    /* ===== header section ===== */
+    /* ===== section (ai-important) ===== */
 
+    .ai-important__block-text img {
+        max-width: 240px;
+    }
+
+    .ai-important__block-text p {
+        max-width: 200px;
+    }
 
     /* ===== footer ===== */
 
@@ -100,7 +107,6 @@
         display: flex;
         gap: 20px;
         justify-content: center;
-
     }
 
     .hero__items .hero__items-two .hero__item {
@@ -114,7 +120,34 @@
         max-width: 269px;
         width: 100%;
     }
+}
 
+@media (max-width: 1100px) {
+
+    /* ====== section (ai-important) ====== */
+
+    .ai-important__title {
+        font-size: 48px;
+        justify-self: center;
+    }
+
+    .ai-important__inner {
+        gap: 20px;
+        max-width: 1000px;
+        justify-content: center;
+    }
+
+    .ai-important__block-text:first-child {
+        margin-right: 0px;
+    }
+
+    .ai-important__block-text:last-child {
+        margin-left: 35px;
+    }
+
+    .ai-important__block-text:nth-child(3) {
+        margin-left: 35px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -167,6 +200,23 @@
     }
 
     .about-ai__title {
+        font-size: 38px;
+        max-width: 640px;
+    }
+
+    /* ====== main (about-us) ====== */
+
+    .about-us__wrapper::after {
+        display: none;
+    }
+
+    .about-us__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us__title {
         font-size: 38px;
         max-width: 640px;
     }
@@ -227,6 +277,25 @@
     .header__button-first {
         max-width: 400px;
         width: 100%;
+    }
+
+    /* ====== section (ai-important) ====== */
+
+    .ai-important__title {
+        font-size: 40px;
+        justify-self: center;
+    }
+
+    /* ====== section (about-us) ====== */
+
+    .about-us__description {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .about-us__description img {
+        width: 28px;
+        height: 28px;
     }
 
     /* ====== footer ====== */
@@ -299,6 +368,7 @@
 
     /* === section (hero) === */
 
+
     .hero__title {
         font-size: 37px;
         max-width: 530px;
@@ -310,7 +380,46 @@
         font-size: 30px;
         max-width: 640px;
     }
+
+    /* ====== section (ai-important) ====== */
+
+    .ai-important__title {
+        font-size: 30px;
+        justify-self: center;
+    }
+
+    .ai-important__block-text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ai-important__block-text:nth-child(n + 3) {
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    .ai-important__block-text:last-child {
+        margin-left: 0px;
+    }
+
+    .ai-important__block-text:nth-child(3) {
+        margin-left: 0px;
+    }
+
+    /* ====== section (about-us) ====== */
+
+    .about-us__title {
+        font-size: 30px;
+        max-width: 470px;
+    }
+
+    .about-us__info {
+        padding-bottom: 100px;
+    }
 }
+
+
 
 @media (max-width: 400px) {
 
@@ -333,6 +442,23 @@
     .about-ai__title {
         font-size: 24px;
         max-width: 500px;
+    }
+
+    /* ====== section (ai-important) ====== */
+
+    .ai-important__title {
+        font-size: 26px;
+    }
+
+    /* ====== section (about-us) ====== */
+
+    .about-us__title {
+        font-size: 33px;
+        max-width: 350px;
+    }
+
+    .about-us__description  {
+        margin-bottom: 60px;
     }
 
     /* ====== footer ====== */
