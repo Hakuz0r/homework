@@ -89,9 +89,9 @@
 
         el.addEventListener('click', (e) => {
 
-            const accordionList = e.currentTarget
-            const accordionOpened = accordionList.querySelector('.accordion-list__item--opened')
-            const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')
+            // const accordionList = e.currentTarget
+            // const accordionOpened = accordionList.querySelector('.accordion-list__item--opened')
+            // const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')
 
             const accordionControl = e.target.closest('.accordion-list__control')
             e.preventDefault()
@@ -100,10 +100,10 @@
             const accordionItem = accordionControl.parentElement
             const accordionContent = accordionControl.nextElementSibling
 
-            if (accordionOpened && accordionItem != accordionOpened) {
-                accordionOpened.classList.remove('accordion-list__item--opened')
-                accordionOpenedContent.style.maxHeight = null
-            }
+            // if (accordionOpened && accordionItem != accordionOpened) {
+            //     accordionOpened.classList.remove('accordion-list__item--opened')
+            //     accordionOpenedContent.style.maxHeight = null
+            // }
             accordionItem.classList.toggle('accordion-list__item--opened')
 
             if (accordionItem.classList.contains('accordion-list__item--opened')) {
@@ -112,7 +112,130 @@
                 accordionContent.style.maxHeight = null
             }
 
+
         });
     });
+
+
+    // Аккордеон слайдера - объявлений
+    const accordionSlider = document.querySelectorAll('.advertisements__text-button')
+
+    accordionSlider.forEach(ele => {
+        ele.addEventListener('click', (e) => {
+
+            const accordionSliderControl = e.target.closest('.advertisements__text-button')
+            if (!accordionSliderControl) return
+
+            const accordionSliderItem = accordionSliderControl.previousElementSibling
+            const accordionSliderContent = accordionSliderControl.previousElementSibling
+
+            accordionSliderItem.classList.toggle('accordion--opened')
+
+            if (accordionSliderItem.classList.contains('accordion--opened')) {
+                accordionSliderContent.style.maxHeight = accordionSliderContent.scrollHeight + 'px'
+            } else {
+                accordionSliderContent.style.maxHeight = null
+            }
+        })
+
+    })
+
+    const accordionSliderVacancies = document.querySelectorAll('.vacancies__text-button')
+
+    accordionSliderVacancies.forEach(ele => {
+        ele.addEventListener('click', (e) => {
+
+            const accordionSliderControl = e.target.closest('.vacancies__text-button')
+            if (!accordionSliderControl) return
+
+            const accordionSliderItem = accordionSliderControl.previousElementSibling
+            const accordionSliderContent = accordionSliderControl.previousElementSibling
+
+            accordionSliderItem.classList.toggle('accordion--opened')
+
+            if (accordionSliderItem.classList.contains('accordion--opened')) {
+                accordionSliderContent.style.maxHeight = accordionSliderContent.scrollHeight + 'px'
+            } else {
+                accordionSliderContent.style.maxHeight = null
+            }
+        })
+
+    })
+
+    // Слайдер объявления
+
+    new Swiper('.advertisements__slider', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+
+
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+
+            420: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+
+            570: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+
+            790: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+
+        }
+    })
+
+    // Слайдер вакансий
+
+    new Swiper('.vacancies__slider', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+
+
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+
+            420: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+
+            570: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+
+            790: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+
+        }
+    })
 
 })();

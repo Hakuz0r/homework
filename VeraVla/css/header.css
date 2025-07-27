@@ -9,10 +9,20 @@
     z-index: -1;
 }
 
-.header__bg-up-img {
+/* .header__bg-up-img {
     position: absolute;
     top: 2px;
     left: -261px;
+    box-shadow: inset 58px 4px 191px 47px #000;
+    mix-blend-mode: lighten;
+    z-index: -2;
+} это то, как выглядит на маке, хуй его знает, как нормально адаптировать под большее разрешение
+ пусть здесь будет */ 
+
+.header__bg-up-img {
+    position: absolute;
+    top: 2px;
+    left: 200px;
     box-shadow: inset 58px 4px 191px 47px #000;
     mix-blend-mode: lighten;
     z-index: -2;
