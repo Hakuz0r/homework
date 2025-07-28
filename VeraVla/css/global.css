@@ -28,7 +28,6 @@
     min-height: 100%;
     width: 100%;
     overflow: hidden;
-
 }
 
 .container {
@@ -147,7 +146,6 @@
     background: var(--accent-bg);
     border-radius: 20px;
     padding: 0 60px 60px;
-
 }
 
 .modal__window-close {
@@ -250,13 +248,11 @@
 .modal__inner {
     max-width: 590px;
     width: 100%;
-
 }
 
 .modal__window-close--second {
-    position: absolute;
-    top: 135px;
-    right: 515px;
+    display: flex;
+    justify-content: end;
 }
 
 
@@ -300,14 +296,13 @@
     gap: 7px;
     max-width: 427px;
     width: 100%;
-}
-
-.field__input-inner span {
     font-weight: 500;
     font-size: 13px;
     letter-spacing: 0.1em;
     color: var(--accent-color);
 }
+
+
 
 
 
@@ -361,7 +356,6 @@
 .headphone-button:hover {
     color: var(--accent-sec-text);
     box-shadow: none;
-
 }
 
 .headphone-button::after {

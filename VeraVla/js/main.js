@@ -21,6 +21,7 @@
 
         const consultationButton = e.target.closest('.button')
         const closeButton = e.target.closest('.modal__window-close')
+        const closeButtonSecond = e.target.closest('.modal__window-close--second')
         const openButtonFirst = e.target.closest('.header__button-first')
         const openButtonSecond = e.target.closest('.headphone-button')
 
@@ -38,6 +39,17 @@
                     modalTarget.classList.remove('active');
                 } else {
                     console.error(`Modal with ${modalId} not found`)
+                }
+                return
+            }
+        };
+
+        if (closeButtonSecond) {
+            const modalIdSec = closeButtonSecond.getAttribute('data-modal');
+            if (modalIdSec) {
+                const modalTargetSec = document.getElementById(modalIdSec);
+                if (modalTargetSec) {
+                    modalTargetSec.classList.remove('active')
                 }
                 return
             }
@@ -140,6 +152,7 @@
 
     })
 
+    // Аккордеон слайдера - вакансий
     const accordionSliderVacancies = document.querySelectorAll('.vacancies__text-button')
 
     accordionSliderVacancies.forEach(ele => {
@@ -167,8 +180,8 @@
     new Swiper('.advertisements__slider', {
         slidesPerView: 3,
         spaceBetween: 20,
-        centeredSlides: true,
-        centeredSlidesBounds: true,
+        // centeredSlides: true,
+        // centeredSlidesBounds: true,
 
 
 
@@ -185,11 +198,13 @@
             420: {
                 slidesPerView: 2,
                 spaceBetween: 20,
+                // centeredSlides: false,
+                // centeredSlidesBounds: false,
             },
 
             570: {
                 slidesPerView: 2,
-                spaceBetween: 20
+                spaceBetween: 20,
             },
 
             790: {
@@ -205,8 +220,8 @@
     new Swiper('.vacancies__slider', {
         slidesPerView: 3,
         spaceBetween: 20,
-        centeredSlides: true,
-        centeredSlidesBounds: true,
+        // centeredSlides: true,
+        // centeredSlidesBounds: true,
 
 
 
@@ -223,6 +238,8 @@
             420: {
                 slidesPerView: 2,
                 spaceBetween: 20,
+                // centeredSlides: false,
+                // centeredSlidesBounds: false,
             },
 
             570: {
