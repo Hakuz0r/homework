@@ -49,9 +49,8 @@ function findStartEven(start, end) {
   for (let i = start; i <= end; i++) {
     if (i % 2 === 0) {
       return `Первое четное число: ${i}`;
-    } else {
-      return `Четных чисел нет`
     }
   }
+  return "Четных чисел нет!";
 }
-console.log(findStartEven(1, 10));
+console.log(findStartEven(5, 10));
