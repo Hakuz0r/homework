@@ -1,0 +1,59 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: local('Cinzel Regular'), local('Cinzel-Regular'),
+        url('../fonts/Cinzel-Regular.woff2') format('woff2'),
+        url('../fonts/Cinzel-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freehand 521';
+    src: local('Freehand 521'), local('Freehand521BT-RegularC'),
+        url('../fonts/Freehand521BT-RegularC.woff2') format('woff2'),
+        url('../fonts/Freehand521BT-RegularC.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: local('Source Sans 3 Medium'), local('SourceSans3-Medium'),
+        url('../fonts/SourceSans3-Medium.woff2') format('woff2'),
+        url('../fonts/SourceSans3-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: local('Source Sans 3 Regular'), local('SourceSans3-Regular'),
+        url('../fonts/SourceSans3-Regular.woff2') format('woff2'),
+        url('../fonts/SourceSans3-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter 18pt';
+    src: local('Inter 18pt Regular'), local('Inter18pt-Regular'),
+        url('../fonts/Inter18pt-Regular.woff2') format('woff2'),
+        url('../fonts/Inter18pt-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

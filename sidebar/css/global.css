@@ -1,0 +1,20 @@
+:root {
+  --belyyfff: #fff;
+  --black303: #303030;
+  --black4d4: #4d4d4d;
+  --graya6a6: #a6a6a6;
+  --whitef2f: #f2f1f0;
+
+  --font-family: "Source Sans 3", sans-serif;
+  --second-family: "Source Sans Pro", sans-serif;
+  --third-family: "Freehand 521", sans-serif;
+  --font3: "Cinzel", sans-serif;
+  --font4: "Inter 18pt", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
