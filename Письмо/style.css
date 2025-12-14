@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  overflow: hidden;
+}
+
+.letter {
+  background: linear-gradient(180deg, #fafdff 0%, #eef6ff 100%);
+  width: 90%;
+  max-width: 700px;
+  padding: 50px 60px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.letter::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -20px;
+  width: 140%;
+  height: 140px;
+  background: #ffffff;
+  border-radius: 50% 50% 0 0;
+  box-shadow: -120px 20px 0 #f1f8ff, 120px 30px 0 #e3f2fd;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  font-family: "Marck Script", cursive;
+  font-size: 48px;
+  color: #c1121f;
+  margin: 0;
+}
+
+.header span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.content {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.content p {
+  margin-bottom: 18px;
+}
+
+.signature {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.signature .from {
+  font-family: "Marck Script", cursive;
+  font-size: 26px;
+  color: #333;
+}
+
+.signature .date {
+  font-size: 14px;
+  color: #777;
+}
+
+.christmass-tree {
+  display: flex;
+  justify-content: center;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+.snowflake:nth-child(1) {
+  left: 10%;
+  animation-duration: 8s;
+}
+.snowflake:nth-child(2) {
+  left: 25%;
+  animation-duration: 10s;
+}
+.snowflake:nth-child(3) {
+  left: 40%;
+  animation-duration: 7s;
+}
+.snowflake:nth-child(4) {
+  left: 55%;
+  animation-duration: 11s;
+}
+.snowflake:nth-child(5) {
+  left: 70%;
+  animation-duration: 9s;
+}
+.snowflake:nth-child(6) {
+  left: 85%;
+  animation-duration: 12s;
+}
+
+@media (max-width: 600px) {
+  .letter {
+    padding: 35px 25px;
+  }
+
+  .header h1 {
+    font-size: 38px;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+}
